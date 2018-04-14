@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: maxxub
+Build-Jdk: 9-Ubuntu
+Implementation-Title: demo
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.example
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/hackdon
+Created-By: Maven Integration for Eclipse
+

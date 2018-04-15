@@ -1,6 +1,7 @@
 @import "node_modules/bootstrap/scss/bootstrap";
 
-body {
+html, body {
+	height: 100% !important;
 	font-family: "Roboto" !important;
 }
 
@@ -15,6 +16,10 @@ body {
 	color: white;
 }
 
+.header_title a:hover {
+	text-decoration: none;
+}
+
 a {
 	color: white !important;
 }
@@ -23,15 +28,164 @@ a.active {
 	color: white !important;
 }
 
+a:hover {
+	text-decoration: none;
+}
+
 .header {
-	height: 400px;
+	padding-top: 1%;
+	height: 60%;
 	background-image: url("../images/header_image.jpg");
 	background-size: cover;
 	background-position: center !important;
 }
 
 h1 {
-	font-size: 24px !important;
+	font-size: 28px !important;
 	color: white !important;
-
 }
+
+h1.header_text {
+	padding-top: 30%;
+}
+
+div.body_info {
+	height: 35%;
+}
+
+img.body_image {
+	height: 50px;
+	width: auto;
+}
+
+p.info_text {
+	color: black;
+	font-size: 18px;
+	margin-top: 15px;
+}
+
+div.body_content {
+	padding-top: 9%;
+}
+
+div.body_banner {
+	height: 35%;
+	background-image: url("../images/body_banner.jpg");
+	background-size: cover;
+	background-position: center;
+}
+
+.body_banner div h2 {
+	font-size: 24px;
+	font-weight: 700;
+	color: white;
+	padding-top: 27%;
+}
+
+div.stats_box {
+	padding-top: 5%;
+	padding-bottom: 5%;
+}
+
+p.stats_title {
+	color: black;
+	font-size: 20px;
+	font-weight: 900;
+}
+
+p.stats {
+	color: #0be881;
+	font-size: 38px;
+	font-weight: 900;
+}
+
+p.stats_desc {
+	color: black;
+	font-size: 18px;
+	margin-top: -3%;
+	font-weight: 500;
+}
+
+div.facebook_map {
+	height: 35%;
+	background-image: url("../images/world_map.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.facebook_map div h2 {
+	font-size: 24px;
+	font-weight: 700;
+	color: white;
+	padding-top: 20%;
+}
+
+.facebook_login {
+	margin-top: 10%;
+}
+
+.facebook_login a {
+	border-radius: 5px;
+	font-size: 18px;
+	font-weight: 700;
+	margin: 0;
+	color: white;
+	padding: 10px 20px;
+	background-color: #0be881;
+	transition: ease .2s;
+}
+
+.facebook_login a:hover {
+	text-decoration: none;
+	background-color: #008c4e;
+}
+
+.support_box {
+	padding: 3% 0 3% 0;
+}
+
+h2.support_title {
+	color: black;
+	font-weight: 900;
+	font-size: 20px;
+}
+
+.support_img {
+	height: 60px;
+	width: auto;
+	padding: 0;
+	margin: 4% 3% 0 3%;
+}
+
+.get_started_button a {
+	border: 2px solid #0be881;
+	border-radius: 5px;
+	color: white;
+	font-size: 28px;
+	background-color: #0be881;
+	padding: 10px 20px;
+	transition: ease .4s;
+}
+
+.get_started_button a:hover {
+	text-decoration: none;
+	background-color: white;
+	color: #0be881 !important;
+}
+
+.get_started {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+@media (min-width: 1200px) {
+    .container{
+        max-width: 1100px;
+    }
+}
+
+
+
+
+

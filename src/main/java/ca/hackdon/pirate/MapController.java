@@ -29,7 +29,11 @@ public class MapController {
 
 	@Value("${application.message:Hello World}")
 	private String message = "Hello World";
-
+/** 
+ * this will show an interactive map for the donors
+ * @param model
+ * @return
+ */
 	@GetMapping("/map")
 	public String map(Map<String, Object> model) {
 		model.put("donor", "Max");

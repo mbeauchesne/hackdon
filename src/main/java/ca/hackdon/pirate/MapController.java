@@ -29,7 +29,7 @@ public class MapController {
 
 	@Value("${application.message:Hello World}")
 	private String message = "Hello World";
-/** 
+/**
  * this will show an interactive map for the donors
  * @param model
  * @return
@@ -40,5 +40,14 @@ public class MapController {
 		model.put("time", new Date());
 		model.put("message", this.message);
 		return "map";
+	}
+
+	@GetMapping("/googlemap")
+	public String googlMap(Map<String, Object> model) {
+		Foundation foundation = new Foundation();
+		foundation.setName("La fondation du CHUS");
+		model.put("chus", foundation);
+
+		return "googlemap";
 	}
 }

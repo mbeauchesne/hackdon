@@ -1,0 +1,37 @@
+@import "node_modules/bootstrap/scss/bootstrap";
+
+body {
+	font-family: "Roboto" !important;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #0be881 !important;
+}
+
+.header_title {
+	font-weight: 900;
+	font-size: 30px;
+	color: white;
+}
+
+a {
+	color: white !important;
+}
+
+a.active {
+	color: white !important;
+}
+
+.header {
+	height: 400px;
+	background-image: url("../images/header_image.jpg");
+	background-size: cover;
+	background-position: center !important;
+}
+
+h1 {
+	font-size: 24px !important;
+	color: white !important;
+
+}

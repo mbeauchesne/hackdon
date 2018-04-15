@@ -35,6 +35,8 @@ public class WelcomeController {
 	@Value("${application.message:Hello World}")
 	private String message = "Hello World";
 
+
+
 	@GetMapping("/")
 	public String welcome(Map<String, Object> model) {
 		model.put("donor", "Max");
@@ -42,6 +44,15 @@ public class WelcomeController {
 		model.put("message", this.message);
 		model.put("professor", this.t.getAge());
 		return "welcome";
+	}
+
+	@GetMapping("/foundation")
+	public String foundation(Map<String, Object> model) {
+		Foundation foundation = new Foundation();
+		foundation.setName("CHUS");
+
+		model.put("foundation", foundation);
+		return "foundation";
 	}
 
 	@RequestMapping("/serviceUnavailable")

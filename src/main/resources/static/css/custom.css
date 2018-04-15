@@ -4,6 +4,11 @@ body {
 	font-family: "Roboto" !important;
 }
 
+.pirate-button {
+    color: #fff;
+    background-color: #0be881 !important;
+}
+
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
     color: #fff;
     background-color: #0be881 !important;
@@ -35,3 +40,4 @@ h1 {
 	color: white !important;
 
 }
+

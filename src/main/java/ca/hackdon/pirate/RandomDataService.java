@@ -25,7 +25,7 @@ public class RandomDataService {
 		Donor donor = new Donor(
 					faker.name().firstName(),
 					generateLong(1,5),
-					"Je donner pour " + familyPosition.get((int)(Math.random()*familyPosition.size())),
+					"Je donner pour " + familyPosition.get((int)(Math.random()*familyPosition.size())-1),
 					"Fondation du CHUS",
 					LocalDateTime.from(currentDate.toInstant()).minusHours(generateLong(0, 9000)),
 					LocalDateTime.from(currentDate.toInstant()).minusHours(generateLong(0, 9000))
@@ -35,7 +35,7 @@ public class RandomDataService {
 
 	public CareService createCareService() {
 		CareService careService = new CareService(
-				careName.get((int)(Math.random()*careName.size())),
+				careName.get((int)(Math.random()*careName.size())-1),
 				generateLong(0, 10000),
 				generateLong(100000, 1000000),
 				generateLong(100000, 1000000),

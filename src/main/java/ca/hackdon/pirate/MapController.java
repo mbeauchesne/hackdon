@@ -44,9 +44,9 @@ public class MapController {
 
 	@GetMapping("/googlemap")
 	public String googlMap(Map<String, Object> model) {
-		Foundation foundation = new Foundation();
-		foundation.setName("La fondation du CHUS");
-		model.put("chus", foundation);
+//		Foundation foundation = new Foundation();
+//		foundation.setName("La fondation du CHUS");
+//		model.put("chus", foundation);
 
 		return "googlemap";
 	}

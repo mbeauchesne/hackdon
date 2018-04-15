@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<body>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Info windows</title>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+  	<div id="pirateDiv" style="display: none;">
+  		{{>foundation}}
+  	</div>
+    <div id="map"></div>
+    <script>
+
+      // This example displays a marker at the center of Australia.
+      // When the user clicks the marker, an info window opens.
+
+      function initMap() {
+        var chus = {lat: 45.3602005, lng: -71.8538586};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 11,
+          center: chus
+        });
+
+		var contentPirate = $("#pirateDiv").html();
+        var contentString = '<div id="content">'+
+			contentPirate
+            +'</div>';
+
+        var infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+
+        var blue = 'http://maps.google.com/mapfiles/ms/micons/blue.png';
+  		var green = 'http://maps.google.com/mapfiles/ms/micons/green.png';
+
+	   	var chus1 = {lat: 45.368176, lng:-71.864747};
+        var marker1 = new google.maps.Marker({
+          position: chus1,
+          map: map,
+          title: 'chus1 (Ayers Rock)',
+          icon: green
+        });
+
+        marker1.addListener('click', function() {
+          infowindow.open(map, marker1);
+        });
+
+
+
+
+        var chus2 = {lat: 45.422921, lng:-71.866573};
+        var marker2 = new google.maps.Marker({
+          position: chus2,
+          map: map,
+          title: 'chus2 (Ayers Rock)',
+          icon: blue
+        });
+
+        var chus3 = {lat: 45.404377, lng:-71.917532};
+        var marker3 = new google.maps.Marker({
+          position: chus3,
+          map: map,
+          title: 'chus3 (Ayers Rock)',
+          icon: green
+        });
+
+        var chus4 = {lat: 45.386870, lng:-71.916730};
+        var marker4 = new google.maps.Marker({
+          position: chus4,
+          map: map,
+          title: 'chus4 (Ayers Rock)',
+          icon: green
+        });
+
+        var chus5 = {lat: 45.312406, lng:-72.374704};
+        var marker5 = new google.maps.Marker({
+          position: chus5,
+          map: map,
+          title: 'chus5 (Ayers Rock)',
+          icon: blue
+        });
+
+         var chus6 = {lat: 45.602352, lng:-71.552103};
+        var marker6 = new google.maps.Marker({
+          position: chus6,
+          map: map,
+          title: 'chus6 (Ayers Rock)',
+          icon: green
+        });
+
+         var chus7 = {lat: 45.216715, lng:-71.583688};
+        var marker7 = new google.maps.Marker({
+          position: chus7,
+          map: map,
+          title: 'chus7 (Ayers Rock)',
+          icon: blue
+        });
+
+         var chus8 = {lat: 45.386720, lng:-72.049234};
+        var marker8 = new google.maps.Marker({
+          position: chus8,
+          map: map,
+          title: 'chus8 (Ayers Rock)',
+          icon: green
+        });
+
+        var chus9 = {lat: 45.222519, lng:-71.688059};
+        var marker9 = new google.maps.Marker({
+          position: chus9,
+          map: map,
+          title: 'chus9 (Ayers Rock)',
+          icon: blue
+        });
+
+
+        var marker = new google.maps.Marker({
+          position: chus,
+          map: map,
+          title: 'chus (Ayers Rock)'
+        });
+
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIx9jDMxj-c2Q91NqhiYSD-tALJc60bJw&callback=initMap">
+    </script>
+  </body>
+</html>
+
+</body>
+
+</html>

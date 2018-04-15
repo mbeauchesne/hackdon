@@ -25,6 +25,9 @@
     </style>
   </head>
   <body>
+  	<div id="pirateDiv" style="display: none;">
+  		{{>foundation}}
+  	</div>
     <div id="map"></div>
     <script>
 
@@ -38,34 +41,18 @@
           center: chus
         });
 
+		var contentPirate = $("#pirateDiv").html();
         var contentString = '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">chus</h1>'+
-            '<div id="bodyContent">'+
-            '<p><b>chus</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
-            'sandstone rock formation in the southern part of the '+
-            'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
-            'south west of the nearest large town, Alice Springs; 450&#160;km '+
-            '(280&#160;mi) by road. Kata Tjuta and chus are the two major '+
-            'features of the chus - Kata Tjuta National Park. chus is '+
-            'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
-            'Aboriginal people of the area. It has many springs, waterholes, '+
-            'rock caves and ancient paintings. chus is listed as a World '+
-            'Heritage Site.</p>'+
-            '<p>Attribution: chus, <a href="https://en.wikipedia.org/w/index.php?title=chus&oldid=297882194">'+
-            'https://en.wikipedia.org/w/index.php?title=chus</a> '+
-            '(last visited June 22, 2009).</p>'+
-            '</div>'+
-            '</div>';
+			contentPirate
+            +'</div>';
 
         var infowindow = new google.maps.InfoWindow({
           content: contentString
         });
-        
+
         var blue = 'http://maps.google.com/mapfiles/ms/micons/blue.png';
   		var green = 'http://maps.google.com/mapfiles/ms/micons/green.png';
-        
+
 	   	var chus1 = {lat: 45.368176, lng:-71.864747};
         var marker1 = new google.maps.Marker({
           position: chus1,
@@ -73,14 +60,14 @@
           title: 'chus1 (Ayers Rock)',
           icon: green
         });
-        
+
         marker1.addListener('click', function() {
           infowindow.open(map, marker1);
         });
-        
-        
-  		
-  		
+
+
+
+
         var chus2 = {lat: 45.422921, lng:-71.866573};
         var marker2 = new google.maps.Marker({
           position: chus2,
@@ -88,7 +75,7 @@
           title: 'chus2 (Ayers Rock)',
           icon: blue
         });
-        
+
         var chus3 = {lat: 45.404377, lng:-71.917532};
         var marker3 = new google.maps.Marker({
           position: chus3,
@@ -96,7 +83,7 @@
           title: 'chus3 (Ayers Rock)',
           icon: green
         });
-        
+
         var chus4 = {lat: 45.386870, lng:-71.916730};
         var marker4 = new google.maps.Marker({
           position: chus4,
@@ -104,7 +91,7 @@
           title: 'chus4 (Ayers Rock)',
           icon: green
         });
-        
+
         var chus5 = {lat: 45.312406, lng:-72.374704};
         var marker5 = new google.maps.Marker({
           position: chus5,
@@ -112,7 +99,7 @@
           title: 'chus5 (Ayers Rock)',
           icon: blue
         });
-        
+
          var chus6 = {lat: 45.602352, lng:-71.552103};
         var marker6 = new google.maps.Marker({
           position: chus6,
@@ -120,7 +107,7 @@
           title: 'chus6 (Ayers Rock)',
           icon: green
         });
-        
+
          var chus7 = {lat: 45.216715, lng:-71.583688};
         var marker7 = new google.maps.Marker({
           position: chus7,
@@ -128,7 +115,7 @@
           title: 'chus7 (Ayers Rock)',
           icon: blue
         });
-        
+
          var chus8 = {lat: 45.386720, lng:-72.049234};
         var marker8 = new google.maps.Marker({
           position: chus8,
@@ -136,7 +123,7 @@
           title: 'chus8 (Ayers Rock)',
           icon: green
         });
-        
+
         var chus9 = {lat: 45.222519, lng:-71.688059};
         var marker9 = new google.maps.Marker({
           position: chus9,
@@ -144,14 +131,14 @@
           title: 'chus9 (Ayers Rock)',
           icon: blue
         });
-        
-  
+
+
         var marker = new google.maps.Marker({
           position: chus,
           map: map,
           title: 'chus (Ayers Rock)'
         });
-        
+
         marker.addListener('click', function() {
           infowindow.open(map, marker);
         });
